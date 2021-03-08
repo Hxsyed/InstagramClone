@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
+
         <!-- Camera -->
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -20,6 +21,7 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Insta">
+        <activity android:name=".SignupActivity"></activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -30,7 +32,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
-        <activity android:name=".MainActivity"></activity>
+
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginAcitivty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

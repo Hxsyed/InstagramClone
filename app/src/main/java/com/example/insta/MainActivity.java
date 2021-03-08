@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private Button signout;
     private File photoFile;
 
 
@@ -56,11 +57,21 @@ public class MainActivity extends AppCompatActivity {
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
         ivPostImage = findViewById(R.id.ivPostImage);
         btnSubmit = findViewById(R.id.btnSubmit);
+        signout = findViewById(R.id.signout);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchCamera();
+            }
+        });
+
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+                gotoLoginActivity();
             }
         });
 
@@ -82,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
                 savePost(description,currentuser, photoFile);
             }
         });
+    }
+
+    private void gotoLoginActivity() {
+        Intent i = new Intent(this, LoginAcitivty.class);
+        startActivity(i);
     }
 
     public File getPhotoFileUri(String fileName) {

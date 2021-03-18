@@ -1,8 +1,8 @@
-# Project 3 - *Name of App Here*
+# Project 3 - Instagram Clone
 
-**Name of your app** is a photo sharing app similar to Instagram but using Parse as its backend.
+Instagram Clone is a photo sharing app similar to Instagram but using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![InstagramClone_final](https://user-images.githubusercontent.com/63178444/111576172-51a3f880-8786-11eb-9e8e-b4c82c3060a5.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

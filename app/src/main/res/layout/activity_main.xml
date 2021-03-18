@@ -1,52 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etDescription"
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="Description..."
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="9dp" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TAKE PICTURE"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="57dp" />
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="142dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="324dp" />
-
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIGN OUT" />
-
-</LinearLayout>
+</RelativeLayout>
